@@ -1,0 +1,915 @@
+/* Font Family */
+
+@font-face {
+  font-family: "comfortaa-bold";
+  src: url("../fonts/Comfortaa/static/Comfortaa-Bold.ttf");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "poppins-regular";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+  font-display: block;
+}
+
+/* Global css */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Variable Color */
+  --orange-Color: #fe9611;
+  --lightpink-Color: #fef6eb;
+  --pink-color: #ffebd2;
+  --purple-Color: #51338b;
+  --lightorange-Color: #ffd196;
+  --gray-Color: #3c3c3c;
+
+  --white-color: #fffdf6;
+  --black-color: #333333;
+  --light-black: #65605c;
+
+  /* Font Family Variable */
+  --comfortaa-bold: "comfortaa-bold"; /* comfortaa-bold */
+  --poppins-regular: "poppins-regular"; /* poppins-regular */
+
+  /* Font  */
+  font-size: 10px;
+
+  /* Overflow-x  */
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.container-fullwidth {
+  width: 100%;
+  padding: 0px 50px;
+}
+
+.content-text {
+  font-family: var(--poppins-regular);
+  font-size: clamp(1.5rem, 0.141vw + 1.43rem, 1.7rem);
+  color: var(--light-black);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 1.761vw + 1.62rem, 5rem);
+  /* line-height: 50px; */
+  color: var(--black-color);
+  font-family: var(--comfortaa-bold);
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: clamp(2.6rem, 0.493vw + 2.354rem, 3.3rem);
+  color: var(--black-color);
+  font-family: var(--comfortaa-bold);
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: clamp(1.6rem, 0.141vw + 1.53rem, 1.8rem);
+  color: var(--black-color);
+  font-family: var(--poppins-regular);
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+h4 {
+  font-size: clamp(1.6rem, 0.07vw + 1.565rem, 1.7rem);
+  color: var(--black-color);
+  font-family: var(--comfortaa-bold);
+  margin-bottom: 20px;
+}
+
+.primary-cta {
+  font-family: var(--poppins-regular);
+  font-size: 16px;
+  text-align: center;
+  color: var(--white-color);
+  background: var(--purple-Color);
+  border-radius: 50px;
+  padding: 12px 120px;
+  margin-top: 15px;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+  background-image: linear-gradient(#2d2349, #2d2349);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: 0.5s;
+}
+
+.primary-cta:hover {
+  background-size: 100% 100%;
+}
+
+.primary-cta i {
+  padding-left: 15px;
+}
+
+.module-spacing {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.purple-label {
+  color: var(--purple-Color);
+  font-weight: bold;
+}
+
+/* <!-- Header module --> */
+
+.header-image-wrapper img {
+  width: 220px;
+}
+
+.header-image-wrapper .dog-foot {
+  width: 30px;
+  height: 30px;
+}
+
+.header-main {
+  background-color: var(--orange-Color);
+  padding: 15px 0;
+  width: 100%;
+}
+
+.header-main .header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-wrapper .header-items-wrapper .items {
+  display: flex;
+  list-style: none;
+}
+
+.header-main.with-bg {
+  background: #c57b1c;
+  position: fixed;
+  z-index: 999;
+  transition: 0.5s ease-in-out;
+  width: 100%;
+}
+
+.nav-links {
+  font-family: var(--poppins-regular);
+  font-size: clamp(1.3rem, 0.211vw + 1.194rem, 1.6rem);
+  color: var(--light-black);
+}
+
+.header-wrapper .header-items-wrapper .items a {
+  text-decoration: none;
+  margin-right: 15px;
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+.header-icons-wrapper .paws {
+  background: var(--purple-Color);
+  padding: 5px;
+  border-radius: 50px;
+}
+
+/* Navigation hover transition  */
+
+.header-wrapper .header-items-wrapper .items li::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #004852;
+  display: block;
+  margin: auto;
+  transition: 1s;
+}
+
+.header-wrapper .header-items-wrapper .items li:hover:after {
+  width: 100%;
+}
+
+.header-icons-wrapper i {
+  font-size: 20px;
+  color: var(--white-color);
+  margin-left: 25px;
+}
+
+.header-icons-wrapper i:hover {
+  color: #e1dada;
+}
+
+/* <!-- Banner module --> */
+
+.banner-main {
+  background-color: var(--lightpink-Color);
+}
+
+.banner-image-wrapper {
+  width: 30%;
+  padding-top: 60px;
+}
+
+.banner-text-wrapper {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+.banner-wrapper {
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  width: 100%;
+}
+
+.star-icons {
+  width: 100px;
+  margin-right: 15px;
+}
+
+.star-logo {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.banner-paragraph {
+  font-size: clamp(1.8rem, 0.634vw + 1.483rem, 2.7rem);
+  color: var(--light-black);
+  font-family: var(--poppins-regular);
+  margin-bottom: 20px;
+}
+
+.star-logo .rating {
+  border-right: 1px solid var(--light-black);
+  padding-right: 10px;
+}
+
+.star-logo .review {
+  padding-left: 10px;
+}
+
+.banner-text-wrapper .discount {
+  padding-left: 50px;
+}
+
+.waves {
+  background-color: var(--lightorange-Color);
+  width: 100%;
+}
+
+/* <!-- Order section --> */
+
+.order-main {
+  background-color: var(--lightorange-Color);
+  padding-bottom: 50px;
+}
+
+.order-wrapper {
+  width: 100%;
+  display: flex;
+  padding-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.order-query {
+  width: 20%;
+}
+
+.order-query img {
+  margin-bottom: 20px;
+}
+
+.order-details-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+.order-details-wrapper .order-step {
+  width: 33.33%;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-left: 15px;
+  position: relative;
+}
+
+.order-details-wrapper .order-step .order-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 60px;
+  color: #ffebd2;
+  font-family: var(--comfortaa-bold);
+}
+
+.order-details-wrapper .order-step img {
+  height: 110px;
+  width: 110px;
+  object-fit: contain;
+}
+
+.order-step .order-discount {
+  font-size: 15px;
+}
+
+.order-step p {
+  padding-bottom: 25px;
+}
+
+.blank-version {
+  text-align: center;
+}
+
+/* <!-- Customer success stories --> */
+
+.customer-stories-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-stories-details .stars {
+  margin-left: 15px;
+}
+
+.customer-stories-wrapper {
+  text-align: center;
+}
+
+.featured-wrapper {
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+}
+
+.featured-image-wrapper {
+  width: 45%;
+}
+
+.featured-text-wrapper {
+  width: 55%;
+  margin-left: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.feature-text-details {
+  background: var(--lightpink-Color);
+  padding: 25px;
+  border-radius: 25px;
+  position: relative;
+}
+
+.feature-text-details::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/dog-foot.webp");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 50px;
+  top: -25px;
+  right: -15px;
+}
+
+.customer-name {
+  font-size: clamp(1.7rem, 0.211vw + 1.594rem, 2rem);
+  font-family: var(--poppins-regular);
+  color: var(--purple-Color);
+}
+
+.customer-feedback {
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.customer-feedback .star-icons {
+  padding-left: 15px;
+}
+
+/* <!-- Pet safety module  --> */
+
+.safety-main {
+  background-color: var(--pink-color);
+}
+
+.safety-images img {
+  width: 100px;
+}
+
+.safety-details {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Before  */
+.safety-details::before {
+  content: "";
+  position: absolute;
+  top: -178px;
+  right: 100px;
+  background-image: url(../images/dog-cat-paws.png);
+  width: 250px;
+  height: 130px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 99;
+}
+
+/* After  */
+.safety-details::after {
+  content: "";
+  position: absolute;
+  bottom: -220px;
+  left: 0;
+  background-image: url(../images/paws-bg3.svg);
+  width: 170px;
+  height: 190px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 99;
+}
+
+.safety-details .primary-cta {
+  padding: 12px 80px;
+  margin-bottom: 30px;
+}
+
+.safety-details .content-text {
+  margin-bottom: 30px;
+}
+
+.safety-images img:first-child {
+  margin-right: 20px;
+}
+
+.safety-main.module-spacing {
+  padding-bottom: 0;
+}
+
+.waves-pet {
+  background-color: #fffaf6;
+}
+
+/* <!-- Help module  --> */
+
+.help-main {
+  background-color: #fffaf6;
+}
+
+.help-description {
+  position: relative;
+}
+
+/* After  */
+.help-description::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  right: -40px;
+  background-image: url(../images/cat-tail-orange.png);
+  width: 100px;
+  height: 200px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.help-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.help-details .content-text {
+  width: 70%;
+}
+
+.help-details .cta {
+  width: 30%;
+  text-align: right;
+  position: static;
+  z-index: 99;
+}
+
+.help-details .primary-cta {
+  padding: 12px 25px 12px 60px;
+  margin-top: 0;
+}
+
+.help-details i {
+  padding-left: 30px;
+}
+
+.help-main.module-spacing {
+  padding-top: 0;
+}
+
+/* <!-- Footer main  --> */
+
+.footer-main {
+  background-color: var(--gray-Color);
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer-main .content-text {
+  color: var(--white-color);
+}
+
+/* Scroll to top  */
+
+html {
+  scroll-behavior: smooth;
+}
+
+#scrolltop {
+  position: fixed;
+  padding: 15px 18px;
+  bottom: 30px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  background-color: #004852;
+}
+
+#scrolltop i {
+  font-size: 17px;
+  color: #ecf0f1;
+}
+
+/* @media query 1024px */
+
+@media (max-width: 1024px) {
+
+  /* <!-- help safety module  --> */
+
+  .help-description::after {
+    width: 90px;
+    height: 130px;
+    right: 0;
+  }
+
+  /* Pet safety module  */
+
+  .safety-details::after {
+    bottom: -160px;
+  }
+}
+
+/* @media query 912px */
+
+@media (max-width: 912px) {
+
+  /* <!-- Header module --> */
+
+  .header-image-wrapper img {
+    width: 175px;
+  }
+
+  .star-logo {
+    padding-bottom: 20px;
+  }
+
+  .container-fullwidth {
+    padding: 0 30px;
+  }
+
+  .header-icons-wrapper i {
+    font-size: 18px;
+  }
+
+  /* <!-- Order section --> */
+
+  .order-details-wrapper {
+    flex-wrap: wrap;
+    width: 75%;
+    padding-left: 20px;
+  }
+
+  .order-details-wrapper .order-step {
+    width: 47%;
+    margin-bottom: 30px;
+  }
+
+  .order-query {
+    width: 25%;
+  }
+
+  /* <!-- Pet safety module  --> */
+
+  .safety-details::before {
+    right: 30px;
+  }
+}
+
+/* @media query 853px */
+
+@media (max-width: 853px) {
+
+  /* <!-- Header module --> */
+
+  .container-fullwidth {
+    padding: 0px 20px;
+  }
+
+  .header-wrapper .header-items-wrapper .items a {
+    margin-right: 10px;
+  }
+
+  .header-image-wrapper img {
+    width: 165px;
+  }
+
+  .header-icons-wrapper i {
+    font-size: 17px;
+  }
+
+  /* <!-- Banner module --> */
+
+  .banner-text-wrapper {
+    padding-left: 40px;
+  }
+
+  .banner-paragraph {
+    margin-bottom: 15px;
+  }
+
+  .star-logo {
+    padding-bottom: 15px;
+  }
+
+  /* customer success stories  */
+
+  .customer-stories-main.module-spacing {
+    padding-bottom: 100px;
+  }
+}
+
+/* @media query 768px */
+
+@media (max-width: 768px) {
+
+  /* Global  */
+
+  .module-spacing {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  /* <!-- Header module --> */
+
+  .header-wrapper .header-items-wrapper {
+    display: none;
+  }
+
+  .container-fullwidth {
+    padding: 0px 50px;
+  }
+
+  /* <!-- Banner module --> */
+
+  .banner-wrapper > div {
+    width: 100%;
+  }
+
+  .banner-image-wrapper {
+    padding: 50px;
+    text-align: center;
+  }
+
+  .banner-image-wrapper img {
+    width: 65%;
+  }
+
+  .banner-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .banner-text-wrapper {
+    text-align: center;
+    padding-bottom: 60px;
+    padding-left: 0;
+  }
+
+  .star-logo {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* <!-- Order section --> */
+
+  .order-wrapper > div {
+    width: 100%;
+  }
+
+  .order-query {
+    padding: 0 50px 50px 50px;
+  }
+
+  .order-query h2 {
+    text-align: center;
+  }
+
+  .order-wrapper {
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  .order-query img {
+    width: 70%;
+  }
+
+  /* <!-- Customer success stories --> */
+
+  .featured-text-wrapper {
+    margin-left: 30px;
+  }
+
+  .feature-text-details::before {
+    right: -13px;
+    width: 40px;
+  }
+
+  /* <!-- Pet safety module  --> */
+
+  .safety-details::before {
+    top: -156px;
+    right: 0;
+    width: 240px;
+    height: 140px;
+  }
+
+  .safety-details::after {
+    left: 20px;
+    width: 130px;
+    height: 220px;
+  }
+
+  /* <!-- Help module  --> */
+
+  .help-details .primary-cta {
+    padding: 12px 25px 12px 50px;
+  }
+
+  .help-description::after {
+    width: 65px;
+    height: 160px;
+    right: 0;
+  }
+}
+
+/* @media query 576px */
+
+@media (max-width: 576px) {
+
+  /* Global */
+
+  .primary-cta {
+    padding: 12px 90px;
+  }
+
+  .module-spacing {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* <!-- Header module --> */
+
+  .header-main .header-wrapper {
+    flex-direction: column;
+  }
+
+  .header-image-wrapper {
+    margin-bottom: 10px;
+    margin-left: 25px;
+  }
+
+  .header-icons-wrapper i {
+    margin-left: 20px;
+  }
+
+  /* <!-- Banner module --> */
+
+  .banner-image-wrapper {
+    padding: 40px;
+  }
+
+  .star-logo .review {
+    padding-top: 10px;
+  }
+
+  /* <!-- Order section --> */
+
+  .order-details-wrapper .order-step {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .order-details-wrapper {
+    padding-left: 0;
+  }
+
+  .order-wrapper {
+    padding-bottom: 30px;
+  }
+
+  /* <!-- Customer success stories --> */
+
+  .featured-image-wrapper {
+    width: 100%;
+  }
+
+  .featured-text-wrapper {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .featured-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .customer-stories-details .review {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .customer-feedback .star-icons {
+    margin-right: 25px;
+  }
+
+  .customer-stories-main.module-spacing {
+    padding-bottom: 75px;
+  }
+
+  /* <!-- Pet safety module  --> */
+
+  .safety-details::before {
+    top: -137px;
+    right: 0;
+    width: 150px;
+    height: 150px;
+  }
+
+  .safety-details::after {
+    left: -10px;
+    width: 75px;
+    height: 220px;
+    bottom: -140px;
+  }
+
+  /* <!-- Help module  --> */
+
+  .help-description {
+    text-align: center;
+  }
+
+  .help-details .content-text {
+    width: 100%;
+  }
+
+  .help-details .cta {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .help-description::after {
+    display: none;
+  }
+}
